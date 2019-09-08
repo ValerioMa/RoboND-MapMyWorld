@@ -2,8 +2,8 @@
 <!-- albeto berti chi e'?-->
 <launch>
   <!-- Robot pose -->
-  <arg name="x" default="-0,377575"/>
-  <arg name="y" default="-7,286947"/>
+  <arg name="x" default="-0.377575"/>
+  <arg name="y" default="-7.286947"/>
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>

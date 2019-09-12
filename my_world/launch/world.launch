@@ -2,12 +2,12 @@
 <!-- albeto berti chi e'?-->
 <launch>
   <!-- Robot pose -->
-  <arg name="x" default="7"/>
-  <arg name="y" default="2"/>
-  <arg name="z" default="0"/>
+  <arg name="x" default="-3.77"/>
+  <arg name="y" default="-0.12"/>
+  <arg name="z" default="0.12"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw" default="0"/>
+  <arg name="yaw" default="-0.90"/>
 
 
   <!-- World File -->

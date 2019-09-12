@@ -2,8 +2,8 @@
 <!-- albeto berti chi e'?-->
 <launch>
   <!-- Robot pose -->
-  <arg name="x" default="0"/>
-  <arg name="y" default="0"/>
+  <arg name="x" default="7"/>
+  <arg name="y" default="2"/>
   <arg name="z" default="0"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
@@ -11,8 +11,8 @@
 
 
   <!-- World File -->
-  <arg name="world_file" default="$(find my_world)/world/empty.world"/>
-  <!--arg name="world_file" default="$(find my_world)/world/1floorHouse.world"/-->
+  <!--arg name="world_file" default="$(find my_world)/world/empty.world"/-->
+  <arg name="world_file" default="$(find my_world)/world/1floorHouse.world"/>
 
   <!-- Launch Gazebo World -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">

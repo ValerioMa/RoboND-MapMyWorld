@@ -24,7 +24,7 @@ void drive_robot(float lin_x, float ang_z)
 void process_image_callback(const sensor_msgs::Image img)
 {
     const double max_speed = 0.5;
-    const double max_angular = 0.5;
+    const double max_angular = 2.5;
 
     double lin_x = 0;
     double ang_z = 0; //max_angular;
@@ -35,11 +35,13 @@ void process_image_callback(const sensor_msgs::Image img)
     // Loop through each pixel in the image and check if its equal to the first one
     //std::list<std::pair<int,int>> data_list;
     double mean_i = 0, mean_j = 0;
-    size_t cnt = 0;
+    size_t cnt = 0;    
     for (int i = 0; i < img.height; i++) {
-      for(int j=0; j < img.step; j++){
+      for(int j=0; (j+3) < img.step; j = j+3){
         int idx = i*img.step + j;
-        if(img.data[idx] == white_pixel){
+        if(img.data[idx] == white_pixel &&
+            img.data[idx + 1] == white_pixel &&
+            img.data[idx + 2] == white_pixel){
             mean_i += 2*(i/(double)img.height - 0.5);
             mean_j += 2*(j/(double)img.step - 0.5);
             cnt++;

@@ -12,6 +12,41 @@ capable of chasing a white colored ball in a simulation world in Gazebo.
 * make >= 4.1
 * gcc/g++ >= 5.4
 
+## Run the project
+* Create a catkin workspace
+```bash
+mkdir -p /home/workspace/catkin_ws/src
+cd /home/workspace/catkin_ws/src
+catkin_init_workspace
+```
+* Build the catkin package
+```bash
+cd /home/workspace/catkin_ws
+catkin_make
+```
+* Launch the robot inside the world
+```bash
+cd /home/workspace/catkin_ws
+source devel/setup.bash
+roslaunch my_world my_cart.launch
+```
+* Launch drive_bot and process_image nodes on a new terminal
+```bash
+cd /home/workspace/catkin_ws
+source devel/setup.bash
+roslaunch ball_chaser ball_chaser.launch
+```
+* Move the white ball (located in the center of the football field outside the appartment) in front of the robot in the gazebo world and see the see the robot chasing the ball.
+
+## Generated world
+![my_world](./images/my_world.png)
+
+## Skid steer ferrari
+![my_cart](./images/my_cart.png)
+
+## Differential drive robot
+ ![my_robot](./images/my_robot.png)
+
 ## Project Description  
 Directory Structure  
 ```
@@ -64,39 +99,3 @@ Directory Structure
 │   ├── package.xml                # package info                  
 └──           
 ```
-
-## Run the project
-* Create a catkin workspace
-```bash
-mkdir -p /home/workspace/catkin_ws/src
-cd /home/workspace/catkin_ws/src
-catkin_init_workspace
-```
-* Build the catkin package
-```bash
-cd /home/workspace/catkin_ws
-catkin_make
-```
-* Launch the robot inside the world
-```bash
-cd /home/workspace/catkin_ws
-source devel/setup.bash
-roslaunch my_world my_cart.launch
-```
-* Launch drive_bot and process_image nodes on a new terminal
-```bash
-cd /home/workspace/catkin_ws
-source devel/setup.bash
-roslaunch ball_chaser ball_chaser.launch
-```
-* Move the white ball (located in the center of the football field outside the appartment) in front of the robot in the gazebo world and see the see the robot chasing the ball.
-
-
-## Generated world
-![my_world](./images/my_world.png)
-
-## Skid steer ferrari
-![my_cart](./images/my_cart.png)
-
-## Differential drive robot
- ![my_robot](./images/my_robot.png)

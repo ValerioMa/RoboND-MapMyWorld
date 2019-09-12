@@ -1,5 +1,3 @@
-![udacity](./image/udacity.png)
-
 # Go Chase It Project
 Project 2 of Udacity Robotics Software Engineer Nanodegree Program
 In this project a differential drive robot and a skid steer robot are 

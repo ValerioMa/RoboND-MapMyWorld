@@ -36,6 +36,9 @@ roslaunch ball_chaser ball_chaser.launch
 ```
 * Move the white ball (located in the center of the football field outside the appartment) in front of the robot in the gazebo world and see the see the robot chasing the ball.
 
+## White ball demo
+![my_demo](./images/demo.gif)
+
 ## Generated world
 ![my_world](./images/my_world.png)
 
@@ -75,7 +78,7 @@ Directory Structure
 │   ├── rviz                       # rviz folder for rviz config files
 │   │   ├── config_file.rviz       # base rviz config
 │   ├── models                     # models folder for world models
-│   │   ├── my_ball                # white ball model
+│   │   ├── my_<color>_ball        # <color> ball model
 │   │   │   ├── model.config   
 │   │   │   ├── model.sdf
 │   ├── world                      # world folder for world files

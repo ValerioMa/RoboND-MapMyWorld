@@ -17,18 +17,25 @@ mkdir -p /home/workspace/catkin_ws/src
 cd /home/workspace/catkin_ws/src
 catkin_init_workspace
 ```
+* Clone the repository
+```bash
+cd /home/workspace/catkin_ws/src
+git clone https://github.com/ValerioMa/RoboticsND-GoChaseIt.git
+```
 * Build the catkin package
 ```bash
 cd /home/workspace/catkin_ws
 catkin_make
 ```
-* Launch the robot inside the world
+* Launch the gazebo simulation
+On a first terminal run
 ```bash
 cd /home/workspace/catkin_ws
 source devel/setup.bash
-roslaunch my_world my_cart.launch
+roslaunch my_world my_cart_world.launch 
 ```
-* Launch drive_bot and process_image nodes on a new terminal
+* Launch drive_bot and process_image nodes 
+Open a new terminal and launch the ball_chaser:
 ```bash
 cd /home/workspace/catkin_ws
 source devel/setup.bash

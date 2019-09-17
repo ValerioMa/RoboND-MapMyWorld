@@ -11,16 +11,16 @@ capable of chasing a white colored ball in a simulation world in Gazebo.
 * gcc/g++ >= 5.4
 
 ## Run the project
-* Create a catkin workspace
-```bash
-mkdir -p /home/workspace/catkin_ws/src
-cd /home/workspace/catkin_ws/src
-catkin_init_workspace
-```
 * Clone the repository
 ```bash
+mkdir -p /home/workspace/catkin_ws/
+cd /home/workspace/catkin_ws/
+git clone https://github.com/ValerioMa/RoboticsND-GoChaseIt.git src
+```
+* Init the catkin workspace
+```bash
 cd /home/workspace/catkin_ws/src
-git clone https://github.com/ValerioMa/RoboticsND-GoChaseIt.git
+catkin_init_workspace
 ```
 * Build the catkin package
 ```bash

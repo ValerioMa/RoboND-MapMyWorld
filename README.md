@@ -38,17 +38,11 @@ On 4 different terminal launch:
   source devel/setup.bash
   roslaunch my_world my_cart_world.launch 
   ```
-  * Amcl localization
+  * Load static map and run Amcl localization
   ```bash
   cd /home/workspace/catkin_ws
   source devel/setup.bash
   roslaunch udacity_bot amcl.launch
-  ```
-  * Load static map
-  ```bash
-  cd /home/workspace/catkin_ws
-  source devel/setup.bash
-  roslaunch udacity_bot map_server.launch
   ```
   * Planning and control
   ```bash

@@ -10,16 +10,16 @@
       <rightFrontJoint>front_right_wheel_hinge</rightFrontJoint>
       <leftRearJoint>back_left_wheel_hinge</leftRearJoint>
       <rightRearJoint>back_right_wheel_hinge</rightRearJoint>
-      <wheelSeparation>0.4</wheelSeparation>
+      <wheelSeparation>0.5</wheelSeparation>
       <wheelDiameter>${2*wheel_radius}</wheelDiameter>
-      <robotBaseFrame>base_link</robotBaseFrame>
-      <torque>20</torque>
+      <robotBaseFrame>robot_footprint</robotBaseFrame>
+      <torque>40</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>robot_footprint</robotBaseFrame>
       <topicName>cmd_vel</topicName>
-      <broadcastTF>false</broadcastTF>
+      <broadcastTF>true</broadcastTF>
       <publishOdomTF>true</publishOdomTF>
       <covariance_x>0.00001</covariance_x>
       <covariance_y>0.00001</covariance_y>

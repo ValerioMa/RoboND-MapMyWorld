@@ -65,8 +65,10 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
 ## Demo
+The robot start the motion towards the clicked position. During the motion the localization filter will converge around the robot true robot position.
 ![my_demo](./images/demo.gif)
 
+Occupancy grid map:
 ![map](./images/map.jpg)
 
 ## map_creator Submodule

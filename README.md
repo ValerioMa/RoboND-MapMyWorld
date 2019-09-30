@@ -4,7 +4,7 @@ In this project a a skid steer robot given the floor map is capable of localizin
 
 ## Prerequisites/Dependencies
 * Linux 16.04
-* Gazebo >= 7.0  
+* Gazebo >= 7.16
 * ROS Kinetic  
 * ros-kinetic-navigation 
 * ros-kinetic-map-server 

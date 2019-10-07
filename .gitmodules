@@ -1,3 +1,0 @@
-[submodule "map_creator"]
-	path = map_creator
-	url = https://github.com/udacity/pgm_map_creator.git

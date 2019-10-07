@@ -9530,7 +9530,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>4.39833 -4.61297 0 0 -0 0</pose>
     </model>
-    <plugin name='collision_map_creator' filename='libcollision_map_creator.so'/>
+
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>

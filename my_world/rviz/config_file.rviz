@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Camera1
         - /LocalCostMap1
         - /LocalPath1
       Splitter Ratio: 0.5
@@ -102,6 +103,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        rgbd_camera:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         robot_footprint:
           Alpha: 1
           Show Axes: false
@@ -174,7 +179,7 @@ Visualization Manager:
     - Class: rviz/Camera
       Enabled: true
       Image Rendering: background and overlay
-      Image Topic: /camera/rgb/image_raw
+      Image Topic: /camera/color/image_raw
       Name: Camera
       Overlay Alpha: 0.5
       Queue Size: 2
@@ -188,6 +193,7 @@ Visualization Manager:
         LocalCostMap: true
         LocalPath: true
         Map: true
+        PointCloud2: true
         PoseArray: true
         RobotModel: true
         TF: true
@@ -275,6 +281,66 @@ Visualization Manager:
       Topic: /move_base/TrajectoryPlannerROS/local_plan
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.00999999978
+      Style: Flat Squares
+      Topic: /rgbd_camera/depth/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.00999999978
+      Style: Flat Squares
+      Topic: /camera/depth/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
@@ -300,25 +366,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 23.6594944
+      Distance: 13.3887148
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.155746937
-        Y: 0.654223084
-        Z: 0
+        X: -4.83014965
+        Y: -1.61140168
+        Z: 1.1920929e-07
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.825398803
+      Pitch: -0.0746011585
       Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 1.17539728
+      Yaw: 6.27858305
     Saved: ~
 Window Geometry:
   Camera:
@@ -338,5 +404,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 928
-  X: 1431
+  X: 992
   Y: 24

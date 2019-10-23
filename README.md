@@ -1,7 +1,8 @@
+![logo](./images/udacity.png)
 # Where am I Project
-Project 2 of Udacity Robotics Software Engineer Nanodegree Program
-In this project a a skid steer robot given the floor map is capable of localizing with the AMCL package using odometers and a hokuyo laser scanner in a simulation world in Gazebo.
-
+Project 3 of Udacity Robotics Software Engineer Nanodegree Program
+In this project a a skid steer robot is capable of mapping a floor plan
+using the RTAB-Map in a simulation world in Gazebo.
 ## Prerequisites/Dependencies
 * Linux 16.04
 * Gazebo >= 7.16
@@ -13,12 +14,12 @@ In this project a a skid steer robot given the floor map is capable of localizin
 * make >= 4.1
 * gcc/g++ >= 5.4
 
-## Run the project
+## SLAM
 * Clone the repository
 ```bash
 mkdir -p /home/workspace/catkin_ws/
 cd /home/workspace/catkin_ws/
-git clone https://github.com/ValerioMa/RoboND-WhereAmI-Project.git
+git clone https://github.com/ValerioMa/RoboND-MapMyWorld.git src
 ```
 * Init the catkin workspace
 ```bash
@@ -30,7 +31,7 @@ catkin_init_workspace
 cd /home/workspace/catkin_ws
 catkin_make
 ```
-* Launch the gazebo simulation
+* Launch the mapping process
 On 4 different terminal launch:
   * Gazebo simulator
   ```bash
@@ -38,34 +39,23 @@ On 4 different terminal launch:
   source devel/setup.bash
   roslaunch my_world my_cart_world.launch 
   ```
-  * Load static map and run Amcl localization
+  * Launch mapping packages
   ```bash
   cd /home/workspace/catkin_ws
   source devel/setup.bash
-  roslaunch udacity_bot amcl.launch
+  roslaunch udacity_bot mapping.launch
   ```
-  * Planning and control
+  * Teleoperate the robot using a xbox joypad
   ```bash
   cd /home/workspace/catkin_ws
   source devel/setup.bash
-  roslaunch udacity_bot move.launch
+  roslaunch udacity_bot joy_teleop.launch
   ```
 
-
-The robot can be controlled using the "2D Nav Goal" button at the top of Rviz.
-The robot will move to the position you click. During the motion the localization filter will converge around the robot true position.
-```bash   
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-```
-
-## Demo
-The robot start the motion towards the clicked position. During the motion the localization filter will converge around the robot true robot position.
-
-![my_demo](./images/demo.gif)
-
-Occupancy grid map:
-
-![map](./images/map.jpg)
-
-## map_creator Submodule
-This submodule can be used to extract the pgm occupancy grid map of the gazebo world. That can be used to localize the robot with the AMCL fitler.
+### Mapping results
+Gazebo world and reconstructed occupancy grid map and 3D mesh
+<p float="center">
+  <img src="./images/gazebo.png" height="180" />
+  <img src="./images/map.png" height="180" /> 
+  <img src="./images/3D_reconstruction.png" height="180" />
+</p>
